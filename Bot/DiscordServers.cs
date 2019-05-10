@@ -52,5 +52,21 @@ namespace BotApp.Bot
                 BotInstance.BroadcastMessage(servers, message);
             }
         }
+        
+        public static (ulong, string) FormattedWelcomeMessage(ulong server, string user, string serverName = null)
+        {
+            var empty = (ulong.MinValue, string.Empty);
+            if (!HasServer(server)) return empty;
+
+            lock (Servers)
+            {
+                var serverEntity = Servers.FirstOrDefault(i => i.ServerId == server);
+                if (serverEntity == null) return empty;
+                var message = serverEntity.ServerWelcome;
+                message = message.Replace("%user%", user);
+                message = message.Replace("%server_name%", serverName ?? serverEntity.ServerName);
+                return (serverEntity.ServerMainChannel, message);
+            }
+        }
     }
 }

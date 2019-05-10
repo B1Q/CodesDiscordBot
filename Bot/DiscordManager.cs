@@ -10,14 +10,14 @@ namespace BotApp.Bot
     {
         public static async Task UserJoined(SocketGuildUser user)
         {
+            var (channel, message) =
+                DiscordServers.FormattedWelcomeMessage(user.Guild.Id, user.Nickname ?? user.Username, user.Guild.Name);
+            await user.Guild.GetTextChannel(channel).SendMessageAsync(message);
         }
-
 
         public static async Task MessageReceived(SocketMessage message)
         {
             if (message.Author.IsBot) return;
-            //await message.Channel.SendMessageAsync($"Member {message.Author.Username} Wrote: {message.Content}");
-            //Log($"{message.Author} sent {message.Content} in {message.Channel.Id}");
             if (message.Channel is SocketGuildChannel guild)
                 DiscordServers.Broadcast($"[{guild.Guild.Name}]-> {message.Author.Username}: {message.Content}",
                     guild.Guild.Id);
