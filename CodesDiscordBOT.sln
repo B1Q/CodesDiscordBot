@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotApp", "BotApp.csproj", "{0DA2E5CA-741F-4C6A-B1C3-1D0055ACF53C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotScripting", "..\BotScripting\BotScripting.csproj", "{1651DD60-F79A-405D-8AFA-78C5EB847FAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DA2E5CA-741F-4C6A-B1C3-1D0055ACF53C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA2E5CA-741F-4C6A-B1C3-1D0055ACF53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA2E5CA-741F-4C6A-B1C3-1D0055ACF53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA2E5CA-741F-4C6A-B1C3-1D0055ACF53C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1651DD60-F79A-405D-8AFA-78C5EB847FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1651DD60-F79A-405D-8AFA-78C5EB847FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1651DD60-F79A-405D-8AFA-78C5EB847FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1651DD60-F79A-405D-8AFA-78C5EB847FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
